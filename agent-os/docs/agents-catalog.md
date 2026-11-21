@@ -1,11 +1,12 @@
 # Agent catalog (clinozy-be)
 
 <!-- GENERATED:START -->
-All 13 project agents — each read-only. Generated from `agents/*.md` frontmatter
+All 14 project agents — each read-only. Generated from `agents/*.md` frontmatter
 and `agents/pipelines.json`. See [platform-access.md](platform-access.md) for how to invoke on each platform.
 
 | Agent | File | Wraps skill | Model (routing rationale) | Pipelines | Use when |
 | ----- | ---- | ----------- | ------------------------- | --------- | -------- |
+| **be-authorization-mapper** | [`agent-os/agents/be-authorization-mapper.md`](../agents/be-authorization-mapper.md) | *(inline)* | `inherit` | — | First step of an authorization sweep — build the route → controller → service access map before reviewing for BOLA/IDOR or function-level authorization |
 | **be-changelog-reviewer** | [`agent-os/agents/be-changelog-reviewer.md`](../agents/be-changelog-reviewer.md) | *(inline)* | `inherit` | — | Verify CHANGELOG.md vs git log / merged PR titles — gap report |
 | **be-ci-investigator** | [`agent-os/agents/be-ci-investigator.md`](../agents/be-ci-investigator.md) | be-ci-investigation | `inherit` | — | One failing CI job — root-cause summary without log noise |
 | **be-dependency-auditor** | [`agent-os/agents/be-dependency-auditor.md`](../agents/be-dependency-auditor.md) | be-dependency-security | `inherit` | be-prod-readiness | pnpm audit — vulnerabilities + prioritized fix plan |
